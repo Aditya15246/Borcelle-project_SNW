@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About BORCELLE</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      background-color: #222; 
+      color: #fff;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: #111;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #b277ff; 
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: #ddd;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 5px 0;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #b277ff;
+    }
+
+    .about-section {
+        padding: 40px 50px;
+        margin: 0 auto;
+        max-width: 900px;
+        flex-grow: 1;
+    }
+
+    .about-section h2 {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #b277ff;
+        text-align: center;
+    }
+    
+    .about-section > p {
+        font-size: 18px;
+        color: #ccc;
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #444; 
+    }
+
+    .feature-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .feature-card {
+        background-color: #333;
+        padding: 20px;
+        border-radius: 6px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        border-left: 5px solid #b277ff; 
+    }
+
+    .feature-card h3 {
+        font-size: 20px;
+        color: #b277ff;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .feature-card p {
+        font-size: 15px;
+        color: #ddd;
+    }
+
+    .simple-footer {
+        background-color: #111;
+        text-align: center; 
+        padding: 20px 10px;
+        border-top: 1px solid #444;
+        margin-top: 40px;
+    }
+
+    .footer-links-simple a {
+        color: #b277ff;
+        text-decoration: none;
+        margin: 0 10px; 
+        font-size: 14px;
+    }
+
+    .footer-copyright-simple {
+        margin: 8px 0 0 0; 
+        font-size: 12px;
+        color: #888;
+    }
+
+    @media (max-width: 600px) {
+        .navbar {
+            padding: 15px 20px;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .nav-links {
+            gap: 15px;
+        }
+        .about-section {
+            padding: 30px 20px;
+        }
+        .about-section h2 {
+            font-size: 28px;
+        }
+    }
+  </style>  
+</head>
+<body>
+   <header class="navbar">
+        <div class="logo">BORCELLE</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <div class="about-section">
+        <h2>Pioneering the Future of Healthcare</h2>
+        <p>
+            At BORCELLE, we are dedicated to transforming patient care and wellness by integrating modern technology into healthcare services. Our mission is to make intelligent, accessible, and personalized care a reality for everyone.
+        </p>
+
+        <div class="feature-list">
+            
+            <div class="feature-card">
+                <h3>Our Core Vision</h3>
+                <p>
+                    We strive to modernize healthcare by delivering intelligent solutions that empower both patients and clinicians. We focus on digital transformation to remove barriers and enhance the quality of care worldwide.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Focus on Precision</h3>
+                <p>
+                    We utilize advanced analytics and AI for predictive modeling and personalized medicine. This data-driven approach allows us to tailor treatments to individual needs, leading to more effective therapies and better outcomes.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Accessible Telehealth</h3>
+                <p>
+                    Our commitment includes expanding healthcare access through a simple and robust telehealth platform. We offer convenient virtual consultations and remote monitoring, ensuring continuity of care, especially for remote patients.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>The BORCELLE Team</h3>
+                <p>
+                    Our strength lies in our multidisciplinary team of experts—from medical professionals and engineers to data scientists. This collective knowledge ensures that our innovations are both practical and impactful in the real world.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="simple-footer">
+        <div class="footer-simple-container">
+            <div class="footer-links-simple">
+                <a href="about.html">About BORCELLE</a>
+                <span class="separator-simple">|</span>
+                <a href="#">Privacy Policy</a>
+                <span class="separator-simple">|</span>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="footer-copyright-simple">
+                &copy; 2025 BORCELLE. All rights reserved.
+            </p>
+        </div>
+    </footer>
+        
+</body>
+</html>
