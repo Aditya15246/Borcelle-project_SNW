@@ -110,7 +110,7 @@
   <div class="section-container">
     <div class="telehealth-block">
       <div class="image-side">
-          <img src="./kali photo.png" alt="Image related to telehealth">
+          <img src="./photo.png" alt="Image related to telehealth">
       </div>
             
       <div class="content-side">
@@ -141,5 +141,25 @@
     </footer>
 
   </div>
+  <script>
+  document.querySelector(".footer-copyright-simple")
+    .innerHTML = `&copy; ${new Date().getFullYear()} BORCELLE. All rights reserved.`;
+// scrollbar
+const elements = document.querySelectorAll(".features");
+function revealOnScroll() {
+  elements.forEach(el => {
+    const position = el.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (position < windowHeight * 0.8) {
+      el.classList.add("show");
+    }
+  });
+}
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+elements.forEach(el => observer.observe(el));  
+</script>
+
 </body>
 </html>

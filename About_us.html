@@ -84,7 +84,7 @@
         margin-top: 30px;
     }
 
-    .feature-card {
+    .features {
         background-color: #333;
         padding: 20px;
         border-radius: 6px;
@@ -92,19 +92,19 @@
         border-left: 5px solid #b277ff; 
     }
 
-    .feature-card h3 {
+    .features h3 {
         font-size: 20px;
         color: #b277ff;
         margin-bottom: 10px;
         font-weight: bold;
     }
 
-    .feature-card p {
+    .features p {
         font-size: 15px;
         color: #ddd;
     }
 
-    .simple-footer {
+    .footer1 {
         background-color: #111;
         text-align: center; 
         padding: 20px 10px;
@@ -112,14 +112,14 @@
         margin-top: 40px;
     }
 
-    .footer-links-simple a {
+    .footer-links a {
         color: #b277ff;
         text-decoration: none;
         margin: 0 10px; 
         font-size: 14px;
     }
 
-    .footer-copyright-simple {
+    .footer3 {
         margin: 8px 0 0 0; 
         font-size: 12px;
         color: #888;
@@ -162,28 +162,28 @@
 
         <div class="feature-list">
             
-            <div class="feature-card">
+            <div class="features">
                 <h3>Our Core Vision</h3>
                 <p>
                     We strive to modernize healthcare by delivering intelligent solutions that empower both patients and clinicians. We focus on digital transformation to remove barriers and enhance the quality of care worldwide.
                 </p>
             </div>
             
-            <div class="feature-card">
+            <div class="features">
                 <h3>Focus on Precision</h3>
                 <p>
                     We utilize advanced analytics and AI for predictive modeling and personalized medicine. This data-driven approach allows us to tailor treatments to individual needs, leading to more effective therapies and better outcomes.
                 </p>
             </div>
 
-            <div class="feature-card">
+            <div class="features">
                 <h3>Accessible Telehealth</h3>
                 <p>
                     Our commitment includes expanding healthcare access through a simple and robust telehealth platform. We offer convenient virtual consultations and remote monitoring, ensuring continuity of care, especially for remote patients.
                 </p>
             </div>
             
-            <div class="feature-card">
+            <div class="features">
                 <h3>The BORCELLE Team</h3>
                 <p>
                     Our strength lies in our multidisciplinary team of experts—from medical professionals and engineers to data scientists. This collective knowledge ensures that our innovations are both practical and impactful in the real world.
@@ -192,20 +192,32 @@
         </div>
     </div>
 
-    <footer class="simple-footer">
-        <div class="footer-simple-container">
-            <div class="footer-links-simple">
+    <footer class="footer1">
+        <div class="footer2">
+            <div class="footer-links">
                 <a href="about.html">About BORCELLE</a>
                 <span class="separator-simple">|</span>
                 <a href="#">Privacy Policy</a>
                 <span class="separator-simple">|</span>
                 <a href="contact.html">Contact</a>
             </div>
-            <p class="footer-copyright-simple">
+            <p class="footer3">
                 &copy; 2025 BORCELLE. All rights reserved.
             </p>
         </div>
     </footer>
-        
+    <script>
+        const links = document.querySelectorAll(".nav-links a");
+links.forEach(link => {
+  if (link.href === window.location.href) {
+    link.classList.add("active");
+  }
+});
+
+document.getElementById("themeBtn").addEventListener("click", () => {
+document.body.classList.toggle("light");
+});
+
+    </script>    
 </body>
 </html>

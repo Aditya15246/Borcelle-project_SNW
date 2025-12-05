@@ -45,7 +45,7 @@
       gap: 20px;
     }
 
-    .input-group {
+    .inputs {
       position: relative;
     }
 
@@ -87,19 +87,19 @@
       box-shadow: 0 6px 20px rgba(124, 59, 216, 0.6);
     }
 
-    .utility-links {
+    .links {
       text-align: center;
       margin-top: 25px;
       font-size: 14px;
     }
 
-    .utility-links a {
+    .links a {
       color: #b277ff;
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
-    .utility-links a:hover {
+    .links a:hover {
       color: #fff;
       text-decoration: underline;
     }
@@ -117,7 +117,7 @@
 
     <form class="login-form">
       
-      <div class="input-group">
+      <div class="inputs">
         <input type="email" id="email" name="email" placeholder="Email Address" required>
       </div>
       
@@ -128,12 +128,39 @@
       <button type="submit">Log In</button>
     </form>
 
-    <div class="utility-links">
+    <div class="links">
       <a href="#">Forgot Password?</a>
       <span class="separator">|</span>
       <a href="#">Create Account</a>
     </div>
   </div>
+<script>
+  const form = document.querySelector(".login-form");
+  const email = document.getElementById("email");
+  const pass = document.getElementById("password");
+  const btn = document.querySelector("button");
+  email.addEventListener("input", checkInputs);
+  pass.addEventListener("input", checkInputs);
+
+  form.addEventListener("submit", function(e) {
+
+    if (!email.value.includes("@") || !email.value.includes(".")) {
+      alert("Invalid email.");
+      return;
+    }
+
+    if (pass.value.length < 6) {
+      alert("Password must be at least 6 characters.");
+      return;
+    };
+
+    alert("Welcome Back!");
+
+    email.value = "";
+    pass.value = "";
+    checkInputs(); 
+  });
+</script>
         
 </body>
 </html>
